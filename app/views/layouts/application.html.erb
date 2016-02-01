@@ -5,25 +5,88 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+
 </head>
 <body>
-<%if user_signed_in? %>
+  <nav>
+     <div class="nav-wrapper  blue darken-4">
+       <a href="/page/home" class="brand-logo">BossFit</a>
+
+
+       <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><a href="/page/home">Home</a></li>
+         <li><a href="/page/about">About</a></li>
+         <li><a href="/page/contact">Contact</a></li>
+
+         <%if user_signed_in? %>
+         <!-- <li><a href="/page/profile">My Profile</a></li> -->
+         <li><a href=""><%= link_to "My Profile", page_profile_path %><br></a></li>
+         <li><a href=""><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><br></a></li>
+
+         <%else%>
+
+
+           <li><a href="/users/sign_in">Sign In</a></li>
+           <li><a href="/users/sign_up">Sign Up</a></li>
+        <% end%>
+
+       </ul>
+     </div>
+   </nav>
+
+<!-- +++++++++++++++++++++++++++++++++++++++ -->
+<!-- <%if user_signed_in? %>
   <%= link_to "My Profile", page_profile_path %><br>
-  <%= link_to "Sing Out", destroy_user_session_path, method: :delete %><br>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %><br>
 
 <%else%>
 
-  <%= link_to "Sing In", new_user_session_path %><br>
-  <%= link_to "Sing Up", new_user_registration_path %><br>
+  <%= link_to "Sign In", new_user_session_path %><br>
+  <%= link_to "Sign Up", new_user_registration_path %><br>
 
 <% end%>
 
 <%= link_to "Home", page_home_path %><br>
 <%= link_to "About", page_about_path %><br>
-<%= link_to "Contact", page_contact_path %><br>
+<%= link_to "Contact", page_contact_path %><br> -->
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++ -->
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 <%= yield %>
 
+<footer class="page-footer  blue darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">BossFit</h5>
+            <p class="grey-text text-lighten-4">I hope you that you guys will enjoy BossTube, and if you guys want to contact me, you can contact me via:</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Contacts</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="http://boss2bmj.github.io/"><i class="fa fa-home"></i>My Blog</li>
+              <li><a class="grey-text text-lighten-3" href="https://github.com/boss2bmj"><i class="fa fa-github-square"></i>GitHub</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/peranat.lappakobkit"><i class="fa fa-facebook-square"></i>Facebook</a></li>
+              <li><a class="grey-text text-lighten-3" href="mailto:boss2bmj@gmail.com"><i class="fa fa-envelope-o"></i>Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <i class="fa fa-copyright"></i>
+        2016 Peranat Lappakobkit 5580968
+        </div>
+      </div>
+    </footer>
+
 </body>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 </html>
