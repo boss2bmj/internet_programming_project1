@@ -11,4 +11,6 @@ before_action :authenticate_user!, only: [:contact,:profile]
   end
   def profile
   end
+  def faq
+  end
 end
