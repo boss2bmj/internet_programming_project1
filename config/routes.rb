@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  get 'cart/index'
+  # get 'cart/index'
+  #
+  # get 'controller/cart'
+  #
+  # get 'controller/index'
 
-  get 'controller/cart'
-
-  get 'controller/index'
+  get '/cart' => 'cart#index'
+  get '/cart/clear' => 'cart#clearCart'
+  get '/cart/:id' => 'cart#add'
 
   resources :products
   get 'page/home'
