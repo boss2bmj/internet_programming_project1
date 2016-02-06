@@ -1,6 +1,6 @@
 class PageController < ApplicationController
 
-before_action :authenticate_user!, only: [:contact,:profile]
+before_action :authenticate_user!, only: [:profile]
   def home
   end
 

@@ -1,8 +1,11 @@
 <h1>Your Cart</h1>
 <p>Find me in app/views/cart/index.html.erb</p>
 
-
-<%= link_to 'Empty Your Cart', cart_clear_path%>
+<% if @cart.empty? %>
+  <p>Your Cart is currently empty</p>
+<% else %>
+  <%= link_to 'Empty Your Cart', cart_clear_path%>
+<% end %>
 <br>
 <a href="/products" class="">Continue Shopping</a>
 <br><br><br>
@@ -32,7 +35,7 @@
               <td><%= number_to_currency(product.price, :unit => '฿') %></td>
 
             </tr>
-            
+
 
 
             <% total += quantity * product.price %>
