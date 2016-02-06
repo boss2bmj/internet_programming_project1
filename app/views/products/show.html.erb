@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= image_tag @product.image.url(:medium) %>
 <p>
   <strong>Title:</strong>
   <%= @product.title %>
@@ -10,14 +10,14 @@
   <%= @product.description %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Image url:</strong>
   <%= @product.image_url %>
-</p>
+</p> -->
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  <%= number_to_currency(@product.price, :unit => '฿') %>
 </p>
 
 <p>

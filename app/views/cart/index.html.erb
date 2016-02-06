@@ -15,6 +15,7 @@
         <thead>
           <tr>
               <th data-field="id">Item Name</th>
+              <th data-field="id">Image</th>
               <th data-field="name">Description</th>
               <th data-field="quantity">Quantity</th>
               <th data-field="price">Item Price</th>
@@ -30,6 +31,7 @@
             <tr>
 
               <td><%= link_to product.title, product%></td>
+              <td><%= image_tag product.image.url(:thumb) %></td>
               <td><%= product.description %></td>
               <td><%=quantity%></td>
               <td><%= number_to_currency(product.price, :unit => '฿') %></td>
@@ -45,6 +47,12 @@
         </tbody>
 
         <% end %>
+        <tbody>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><%= number_to_currency(total, :unit => '฿')%></td>
+        </tbody>
 
       </table>
-<%= number_to_currency(total, :unit => '฿')%>

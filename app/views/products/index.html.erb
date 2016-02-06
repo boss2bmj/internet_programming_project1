@@ -9,7 +9,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th>Image url</th>
+      <th>Image</th>
       <th>Price</th>
       <th>Category</th>
       <th>Subcategory</th>
@@ -23,8 +23,9 @@
       <tr>
         <td><%= product.title %></td>
         <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= product.price %></td>
+        <td><%= image_tag product.image.url(:thumb) %></td>
+        <td><%= number_to_currency(product.price, :unit => '฿') %></td>
+
         <td><%= product.category %></td>
         <td><%= product.subcategory %></td>
         <td><%= product.stock %></td>
@@ -62,7 +63,7 @@
   <div class="col s12 m6 l4">
     <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="http://www.badmintoncentral.com/bc/wp-content/uploads/2013/12/DSC00003.jpg">
+        <img class="activator" src= <%= product.image.url(:large) %> >
       </div>
       <div class="card-content">
         <span class="card-title activator grey-text text-darken-4"><%= product.title %><i class="fa fa-ellipsis-v right"></i></span>
