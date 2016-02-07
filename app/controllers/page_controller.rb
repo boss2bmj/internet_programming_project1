@@ -10,7 +10,9 @@ before_action :authenticate_user!, only: [:profile]
   def contact
   end
   def profile
+
   end
   def faq
   end
+  
 end

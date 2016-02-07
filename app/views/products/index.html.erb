@@ -63,18 +63,30 @@
   <div class="col s12 m6 l4">
     <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src= <%= product.image.url(:large) %> >
+        <img class="activator" src= <%= product.image.url(:large) %>  >
       </div>
       <div class="card-content">
         <span class="card-title activator grey-text text-darken-4"><%= product.title %><i class="fa fa-ellipsis-v right"></i></span>
         <p><%= number_to_currency(product.price, :unit => '฿') %></p>
+        <% if product.stock == 0 %>
+          <p class="red-text">Out of stock!!</p>
+        <%else%>
+          <p>In Stock</p>
+        <%end%>
         <br>
         <!-- <p><a href="/cart/<%= product.id %>" class="">Add to Cart</a></p> -->
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4"><%= product.title %><i class="fa fa-times right"></i></span>
-        <p><%= product.description %></p>
-        <p><%= number_to_currency(product.price, :unit => '฿') %></p>
+        <p>Description: <%= product.description %></p>
+        <p>Price: <%= number_to_currency(product.price, :unit => '฿') %></p>
+        <p>Category: <%= product.category %></p>
+        <p>Sub Category: <%= product.subcategory %></p>
+        <% if product.stock == 0 %>
+          <p class="red-text">Out of stock!!</p>
+        <%else%>
+          <p>In Stock</p>
+        <%end%>
       </div>
     </div>
   </div>
