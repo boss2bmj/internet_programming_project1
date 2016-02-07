@@ -1,5 +1,9 @@
+<div class="section no-pad-bot">
+  <div class="container">
+    <div class="row main-text-color">
 <p id="notice"><%= notice %></p>
-<%= image_tag @product.image.url(:medium) %>
+<img class="materialboxed" width="350" data-caption= <%= @product.title %> src= <%= @product.image.url(:large) %> >
+<!-- <%= image_tag @product.image.url(:medium) %> -->
 <p>
   <strong>Title:</strong>
   <%= @product.title %>
@@ -29,11 +33,15 @@
   <strong>Subcategory:</strong>
   <%= @product.subcategory %>
 </p>
-
+<%if user_signed_in? %>
 <p>
   <strong>Stock:</strong>
   <%= @product.stock %>
 </p>
+<%end%>
+</div>
+</div>
+</div>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
