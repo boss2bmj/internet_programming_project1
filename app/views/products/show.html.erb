@@ -1,9 +1,38 @@
 <div class="section no-pad-bot">
   <div class="container">
     <div class="row main-text-color">
-<p id="notice"><%= notice %></p>
-<img class="materialboxed" width="350" data-caption= <%= @product.title %> src= <%= @product.image.url(:large) %> >
+      <p id="notice"><%= notice %></p>
+      <img class="materialboxed" width="350" data-caption= <%= @product.title %> src= <%= @product.image.url(:large) %> >
 <!-- <%= image_tag @product.image.url(:medium) %> -->
+      <table class="striped">
+        <thead>
+          <tr>
+            <th data-field="title">Title</th>
+            <th data-field="description">Description</th>
+            <th data-field="price">Item Price</th>
+            <th data-field="category">Category</th>
+            <th data-field="subcategory">Subcategory</th>
+            <%if user_signed_in? %>
+            <th data-field="stock">Stock</th>
+            <%end%>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @product.title %> </td>
+            <td> <%= @product.description %> </td>
+            <td> <%= number_to_currency(@product.price, :unit => '฿') %> </td>
+            <td> <%= @product.category %> </td>
+            <td> <%= @product.subcategory %> </td>
+            <%if user_signed_in? %>
+            <td> <%= @product.stock %> </td>
+            <%end%>
+          </tr>
+        </tbody>
+      </table> <br>
+
+<!--
 <p>
   <strong>Title:</strong>
   <%= @product.title %>
@@ -12,13 +41,13 @@
 <p>
   <strong>Description:</strong>
   <%= @product.description %>
-</p>
+</p> -->
 
 <!-- <p>
   <strong>Image url:</strong>
   <%= @product.image_url %>
 </p> -->
-
+<!--
 <p>
   <strong>Price:</strong>
   <%= number_to_currency(@product.price, :unit => '฿') %>
@@ -38,10 +67,9 @@
   <strong>Stock:</strong>
   <%= @product.stock %>
 </p>
-<%end%>
+<%end%> -->
+      <a class="waves-effect waves-light btn blue darken-4"   <%= link_to 'Edit', edit_product_path(@product) %> </a>
+      <a class="waves-effect waves-light btn blue darken-4" <%= link_to 'Back', products_path %> </a>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
