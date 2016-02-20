@@ -13,35 +13,56 @@
 </head>
 <body>
   <!-- Dropdown Structure -->
-
-
-
   <%= render 'layouts/header'%>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
-  <%= render 'layouts/footer'%>
+  <%if user_signed_in? %>
 
-  <!-- +++++++++++++++++++++++++++++++++++++++ -->
-  <!-- <%if user_signed_in? %>
-    <%= link_to "My Profile", page_profile_path %><br>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %><br>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
 
   <%else%>
+    <div class="parallax-container">
+      <div class="parallax"><img src="http://www.rsl-1928.com/products/6-apparel.jpg"></div>
+    </div>
+      <div class= "container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
 
-    <%= link_to "Sign In", new_user_session_path %><br>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="https://scontent.fbkk2-1.fna.fbcdn.net/hphotos-xtf1/t31.0-8/s2048x2048/11822974_10153606540743804_6898329207281046568_o.jpg"></div>
+    </div>
 
-  <% end%>
-
-  <%= link_to "Home", page_home_path %><br>
-  <%= link_to "About", page_about_path %><br>
-  <%= link_to "Contact", page_contact_path %><br> -->
+  <%end%>
 
 
-  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+  <%= render 'layouts/footer'%>
+
+
+
 
 </body>
 
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<script>
+  $(function(){
+    $(document).ready(function(){
+      $('.slider').slider({
+        full_width: true,
+        height:600,
+      });
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+    });
+
+
+  });
+</script>
 </html>
