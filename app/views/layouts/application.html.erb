@@ -22,7 +22,7 @@
 
   <%else%>
     <div class="parallax-container">
-      <div class="parallax"><img src="http://www.rsl-1928.com/products/6-apparel.jpg"></div>
+      <div class="parallax"><%= image_tag("bk3.jpg") %></div>
     </div>
       <div class= "container">
         <p class="notice"><%= notice %></p>
@@ -31,7 +31,7 @@
 
     </div>
     <div class="parallax-container">
-      <div class="parallax"><img src="https://scontent.fbkk2-1.fna.fbcdn.net/hphotos-xtf1/t31.0-8/s2048x2048/11822974_10153606540743804_6898329207281046568_o.jpg"></div>
+      <div class="parallax"><%= image_tag("bkb2.jpg") %></div>
     </div>
 
   <%end%>
@@ -55,7 +55,7 @@
     $(document).ready(function(){
       $('.slider').slider({
         full_width: true,
-        height:600,
+        height:425,
       });
       $(document).ready(function(){
         $('.parallax').parallax();
