@@ -69,6 +69,6 @@ class PoiRacketInfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poi_racket_info_params
-      params.require(:poi_racket_info).permit(:title_name, :description, :image_url, :shaft, :weight, :length, :price)
+      params.require(:poi_racket_info).permit(:title_name, :description, :image_url, :shaft, :weight, :length, :price, :image)
     end
 end

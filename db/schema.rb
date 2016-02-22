@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222133334) do
+ActiveRecord::Schema.define(version: 20160222155051) do
 
   create_table "poi_apparel_infos", force: :cascade do |t|
     t.string   "title_name"
@@ -19,8 +19,12 @@ ActiveRecord::Schema.define(version: 20160222133334) do
     t.string   "image_url"
     t.integer  "price"
     t.integer  "stock"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "poi_grips_infos", force: :cascade do |t|
@@ -29,8 +33,12 @@ ActiveRecord::Schema.define(version: 20160222133334) do
     t.string   "image_url"
     t.string   "color"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "poi_poi_infos", force: :cascade do |t|
@@ -67,8 +75,12 @@ ActiveRecord::Schema.define(version: 20160222133334) do
     t.string   "weight"
     t.string   "length"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "poi_shuttlecocks_infos", force: :cascade do |t|
@@ -76,8 +88,12 @@ ActiveRecord::Schema.define(version: 20160222133334) do
     t.text     "description"
     t.string   "image_url"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "poi_string_infos", force: :cascade do |t|
@@ -88,8 +104,12 @@ ActiveRecord::Schema.define(version: 20160222133334) do
     t.string   "length"
     t.string   "color"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "products", force: :cascade do |t|

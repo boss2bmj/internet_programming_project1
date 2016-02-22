@@ -69,6 +69,6 @@ class PoiApparelInfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poi_apparel_info_params
-      params.require(:poi_apparel_info).permit(:title_name, :description, :image_url, :price, :stock)
+      params.require(:poi_apparel_info).permit(:title_name, :description, :image_url, :price, :stock, :image)
     end
 end

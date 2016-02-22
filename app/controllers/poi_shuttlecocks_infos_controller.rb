@@ -69,6 +69,6 @@ class PoiShuttlecocksInfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poi_shuttlecocks_info_params
-      params.require(:poi_shuttlecocks_info).permit(:title_name, :description, :image_url, :price)
+      params.require(:poi_shuttlecocks_info).permit(:title_name, :description, :image_url, :price, :image)
     end
 end
