@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: poi_racket_infos
+#
+#  id          :integer          not null, primary key
+#  title_name  :string
+#  description :text
+#  image_url   :string
+#  shaft       :string
+#  weight      :string
+#  length      :string
+#  price       :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title_name: MyString
+  description: MyText
+  image_url: MyString
+  shaft: MyString
+  weight: MyString
+  length: MyString
+  price: 1
+
+two:
+  title_name: MyString
+  description: MyText
+  image_url: MyString
+  shaft: MyString
+  weight: MyString
+  length: MyString
+  price: 1

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title name:</strong>
+  <%= @poi_shuttlecocks_info.title_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @poi_shuttlecocks_info.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @poi_shuttlecocks_info.image_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @poi_shuttlecocks_info.price %>
+</p>
+
+<%= link_to 'Edit', edit_poi_shuttlecocks_info_path(@poi_shuttlecocks_info) %> |
+<%= link_to 'Back', poi_shuttlecocks_infos_path %>

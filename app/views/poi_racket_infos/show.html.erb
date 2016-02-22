@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title name:</strong>
+  <%= @poi_racket_info.title_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @poi_racket_info.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @poi_racket_info.image_url %>
+</p>
+
+<p>
+  <strong>Shaft:</strong>
+  <%= @poi_racket_info.shaft %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @poi_racket_info.weight %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @poi_racket_info.length %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @poi_racket_info.price %>
+</p>
+
+<%= link_to 'Edit', edit_poi_racket_info_path(@poi_racket_info) %> |
+<%= link_to 'Back', poi_racket_infos_path %>

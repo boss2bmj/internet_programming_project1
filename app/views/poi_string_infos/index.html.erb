@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Poi String Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title name</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Guage</th>
+      <th>Length</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poi_string_infos.each do |poi_string_info| %>
+      <tr>
+        <td><%= poi_string_info.title_name %></td>
+        <td><%= poi_string_info.description %></td>
+        <td><%= poi_string_info.image_url %></td>
+        <td><%= poi_string_info.guage %></td>
+        <td><%= poi_string_info.length %></td>
+        <td><%= poi_string_info.color %></td>
+        <td><%= poi_string_info.price %></td>
+        <td><%= link_to 'Show', poi_string_info %></td>
+        <td><%= link_to 'Edit', edit_poi_string_info_path(poi_string_info) %></td>
+        <td><%= link_to 'Destroy', poi_string_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poi string info', new_poi_string_info_path %>

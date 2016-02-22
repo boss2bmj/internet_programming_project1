@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title name:</strong>
+  <%= @poi_string_info.title_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @poi_string_info.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @poi_string_info.image_url %>
+</p>
+
+<p>
+  <strong>Guage:</strong>
+  <%= @poi_string_info.guage %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @poi_string_info.length %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @poi_string_info.color %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @poi_string_info.price %>
+</p>
+
+<%= link_to 'Edit', edit_poi_string_info_path(@poi_string_info) %> |
+<%= link_to 'Back', poi_string_infos_path %>

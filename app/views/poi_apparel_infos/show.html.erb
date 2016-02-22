@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title name:</strong>
+  <%= @poi_apparel_info.title_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @poi_apparel_info.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @poi_apparel_info.image_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @poi_apparel_info.price %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @poi_apparel_info.stock %>
+</p>
+
+<%= link_to 'Edit', edit_poi_apparel_info_path(@poi_apparel_info) %> |
+<%= link_to 'Back', poi_apparel_infos_path %>

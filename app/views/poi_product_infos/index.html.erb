@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Poi Product Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Detailed description</th>
+      <th>Product</th>
+      <th>Poi info</th>
+      <th>Poi info type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poi_product_infos.each do |poi_product_info| %>
+      <tr>
+        <td><%= poi_product_info.detailed_description %></td>
+        <td><%= poi_product_info.product %></td>
+        <td><%= poi_product_info.poi_info_id %></td>
+        <td><%= poi_product_info.poi_info_type %></td>
+        <td><%= link_to 'Show', poi_product_info %></td>
+        <td><%= link_to 'Edit', edit_poi_product_info_path(poi_product_info) %></td>
+        <td><%= link_to 'Destroy', poi_product_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poi product info', new_poi_product_info_path %>

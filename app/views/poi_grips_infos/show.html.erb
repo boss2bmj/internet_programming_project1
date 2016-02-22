@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title name:</strong>
+  <%= @poi_grips_info.title_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @poi_grips_info.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @poi_grips_info.image_url %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @poi_grips_info.color %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @poi_grips_info.price %>
+</p>
+
+<%= link_to 'Edit', edit_poi_grips_info_path(@poi_grips_info) %> |
+<%= link_to 'Back', poi_grips_infos_path %>

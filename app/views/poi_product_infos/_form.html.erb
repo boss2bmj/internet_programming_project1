@@ -1,0 +1,33 @@
+<%= form_for(@poi_product_info) do |f| %>
+  <% if @poi_product_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@poi_product_info.errors.count, "error") %> prohibited this poi_product_info from being saved:</h2>
+
+      <ul>
+      <% @poi_product_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :detailed_description %><br>
+    <%= f.text_area :detailed_description %>
+  </div>
+  <div class="field">
+    <%= f.label :product_id %><br>
+    <%= f.text_field :product_id %>
+  </div>
+  <div class="field">
+    <%= f.label :poi_info_id %><br>
+    <%= f.number_field :poi_info_id %>
+  </div>
+  <div class="field">
+    <%= f.label :poi_info_type %><br>
+    <%= f.text_field :poi_info_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

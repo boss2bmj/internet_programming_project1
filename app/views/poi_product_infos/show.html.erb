@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Detailed description:</strong>
+  <%= @poi_product_info.detailed_description %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @poi_product_info.product %>
+</p>
+
+<p>
+  <strong>Poi info:</strong>
+  <%= @poi_product_info.poi_info_id %>
+</p>
+
+<p>
+  <strong>Poi info type:</strong>
+  <%= @poi_product_info.poi_info_type %>
+</p>
+
+<%= link_to 'Edit', edit_poi_product_info_path(@poi_product_info) %> |
+<%= link_to 'Back', poi_product_infos_path %>

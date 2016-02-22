@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Poi Racket Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title name</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Shaft</th>
+      <th>Weight</th>
+      <th>Length</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poi_racket_infos.each do |poi_racket_info| %>
+      <tr>
+        <td><%= poi_racket_info.title_name %></td>
+        <td><%= poi_racket_info.description %></td>
+        <td><%= poi_racket_info.image_url %></td>
+        <td><%= poi_racket_info.shaft %></td>
+        <td><%= poi_racket_info.weight %></td>
+        <td><%= poi_racket_info.length %></td>
+        <td><%= poi_racket_info.price %></td>
+        <td><%= link_to 'Show', poi_racket_info %></td>
+        <td><%= link_to 'Edit', edit_poi_racket_info_path(poi_racket_info) %></td>
+        <td><%= link_to 'Destroy', poi_racket_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poi racket info', new_poi_racket_info_path %>

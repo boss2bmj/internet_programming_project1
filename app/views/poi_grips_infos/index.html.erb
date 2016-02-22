@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Poi Grips Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title name</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poi_grips_infos.each do |poi_grips_info| %>
+      <tr>
+        <td><%= poi_grips_info.title_name %></td>
+        <td><%= poi_grips_info.description %></td>
+        <td><%= poi_grips_info.image_url %></td>
+        <td><%= poi_grips_info.color %></td>
+        <td><%= poi_grips_info.price %></td>
+        <td><%= link_to 'Show', poi_grips_info %></td>
+        <td><%= link_to 'Edit', edit_poi_grips_info_path(poi_grips_info) %></td>
+        <td><%= link_to 'Destroy', poi_grips_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poi grips info', new_poi_grips_info_path %>
