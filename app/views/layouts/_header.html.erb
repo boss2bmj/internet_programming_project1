@@ -6,7 +6,12 @@
 
       <%if user_signed_in? %>
       <!-- <li><a href="/page/profile">My Profile</a></li> -->
-      <li><a href="/products">Stock</a></li>
+      <li><a href="/products">Product</a></li>
+      <li><a href="/poi_apparel_infos">Apparel</a></li>
+      <li><a href="/poi_grips_infos">Grip</a></li>
+      <li><a href="/poi_racket_infos">Racket</a></li>
+      <li><a href="/poi_shuttlecocks_infos">Shuttlecocks</a></li>
+      <li><a href="/poi_string_infos">String</a></li>
       <li><a href=""><%= link_to "Admin", page_profile_path %><br></a></li>
       <li><a href=""><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><br></a></li>
       <!-- <li><a href="/users/sign_up">Sign Up</a></li> -->

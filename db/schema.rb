@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222155051) do
+ActiveRecord::Schema.define(version: 20160222164022) do
 
   create_table "poi_apparel_infos", force: :cascade do |t|
     t.string   "title_name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160222155051) do
     t.string   "image_url"
     t.string   "color"
     t.integer  "price"
+    t.integer  "stock"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"
@@ -40,19 +41,6 @@ ActiveRecord::Schema.define(version: 20160222155051) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
-
-  create_table "poi_poi_infos", force: :cascade do |t|
-    t.text     "detailed_description"
-    t.integer  "product_id"
-    t.integer  "poi_info_id"
-    t.string   "poi_info_type"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-  end
-
-  add_index "poi_poi_infos", ["poi_info_id"], name: "index_poi_poi_infos_on_poi_info_id"
-  add_index "poi_poi_infos", ["poi_info_type"], name: "index_poi_poi_infos_on_poi_info_type"
-  add_index "poi_poi_infos", ["product_id"], name: "index_poi_poi_infos_on_product_id"
 
   create_table "poi_product_infos", force: :cascade do |t|
     t.text     "detailed_description"
@@ -75,6 +63,7 @@ ActiveRecord::Schema.define(version: 20160222155051) do
     t.string   "weight"
     t.string   "length"
     t.integer  "price"
+    t.integer  "stock"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"
@@ -88,6 +77,7 @@ ActiveRecord::Schema.define(version: 20160222155051) do
     t.text     "description"
     t.string   "image_url"
     t.integer  "price"
+    t.integer  "stock"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"
@@ -104,6 +94,7 @@ ActiveRecord::Schema.define(version: 20160222155051) do
     t.string   "length"
     t.string   "color"
     t.integer  "price"
+    t.integer  "stock"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"

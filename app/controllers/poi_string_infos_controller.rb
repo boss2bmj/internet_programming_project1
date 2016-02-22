@@ -69,6 +69,6 @@ class PoiStringInfosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poi_string_info_params
-      params.require(:poi_string_info).permit(:title_name, :description, :image_url, :guage, :length, :color, :price, :image)
+      params.require(:poi_string_info).permit(:title_name, :description, :image_url, :guage, :length, :color, :price, :stock, :image)
     end
 end

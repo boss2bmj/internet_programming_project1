@@ -18,7 +18,7 @@ class PoiRacketInfosControllerTest < ActionController::TestCase
 
   test "should create poi_racket_info" do
     assert_difference('PoiRacketInfo.count') do
-      post :create, poi_racket_info: { description: @poi_racket_info.description, image_url: @poi_racket_info.image_url, length: @poi_racket_info.length, price: @poi_racket_info.price, shaft: @poi_racket_info.shaft, title_name: @poi_racket_info.title_name, weight: @poi_racket_info.weight }
+      post :create, poi_racket_info: { description: @poi_racket_info.description, image_url: @poi_racket_info.image_url, length: @poi_racket_info.length, price: @poi_racket_info.price, shaft: @poi_racket_info.shaft, stock: @poi_racket_info.stock, title_name: @poi_racket_info.title_name, weight: @poi_racket_info.weight }
     end
 
     assert_redirected_to poi_racket_info_path(assigns(:poi_racket_info))
@@ -35,7 +35,7 @@ class PoiRacketInfosControllerTest < ActionController::TestCase
   end
 
   test "should update poi_racket_info" do
-    patch :update, id: @poi_racket_info, poi_racket_info: { description: @poi_racket_info.description, image_url: @poi_racket_info.image_url, length: @poi_racket_info.length, price: @poi_racket_info.price, shaft: @poi_racket_info.shaft, title_name: @poi_racket_info.title_name, weight: @poi_racket_info.weight }
+    patch :update, id: @poi_racket_info, poi_racket_info: { description: @poi_racket_info.description, image_url: @poi_racket_info.image_url, length: @poi_racket_info.length, price: @poi_racket_info.price, shaft: @poi_racket_info.shaft, stock: @poi_racket_info.stock, title_name: @poi_racket_info.title_name, weight: @poi_racket_info.weight }
     assert_redirected_to poi_racket_info_path(assigns(:poi_racket_info))
   end
 

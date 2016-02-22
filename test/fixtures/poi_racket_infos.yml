@@ -10,6 +10,7 @@
 #  weight             :string
 #  length             :string
 #  price              :integer
+#  stock              :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  image_file_name    :string
@@ -28,6 +29,7 @@ one:
   weight: MyString
   length: MyString
   price: 1
+  stock: 1
 
 two:
   title_name: MyString
@@ -37,3 +39,4 @@ two:
   weight: MyString
   length: MyString
   price: 1
+  stock: 1

@@ -1,29 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="section no-pad-bot">
+  <div class="container">
+    <div class="row main-text-color">
+      <p id="notice"><%= notice %></p>
+      <img class="materialboxed" width="350" data-caption= <%= @poi_grips_info.title_name %> src= <%= @poi_grips_info.image.url(:large) %> >
+      <table class="striped">
+        <thead>
+          <tr>
+            <th data-field="title">Title</th>
+            <th data-field="description">Description</th>
+            <th data-field="color">Color</th>
+            <th data-field="price">Price</th>
+            <%if user_signed_in? %>
+            <th data-field="stock">Stock</th>
+            <%end%>
+          </tr>
+        </thead>
 
-<p>
-  <strong>Title name:</strong>
-  <%= @poi_grips_info.title_name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @poi_grips_info.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @poi_grips_info.image_url %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @poi_grips_info.color %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @poi_grips_info.price %>
-</p>
-
-<%= link_to 'Edit', edit_poi_grips_info_path(@poi_grips_info) %> |
-<%= link_to 'Back', poi_grips_infos_path %>
+        <tbody>
+          <tr>
+            <td> <%= @poi_grips_info.title_name %> </td>
+            <td> <%= @poi_grips_info.description %> </td>
+            <td> <%= number_to_currency(@poi_grips_info.price, :unit => '฿') %> </td>
+            <td> <%= @poi_grips_info.color %> </td>
+            <%if user_signed_in? %>
+            <td> <%= @poi_grips_info.stock %> </td>
+            <%end%>
+          </tr>
+        </tbody>
+      </table> <br>
+      <a class="waves-effect waves-light btn blue darken-4"   <%= link_to 'Edit', edit_poi_grips_info_path(@poi_grips_info) %> </a>
+      <a class="waves-effect waves-light btn blue darken-4" <%= link_to 'Back', poi_grips_infos_path %> </a>
+    </div>
+  </div>
+</div>

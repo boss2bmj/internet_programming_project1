@@ -18,7 +18,7 @@ class PoiGripsInfosControllerTest < ActionController::TestCase
 
   test "should create poi_grips_info" do
     assert_difference('PoiGripsInfo.count') do
-      post :create, poi_grips_info: { color: @poi_grips_info.color, description: @poi_grips_info.description, image_url: @poi_grips_info.image_url, price: @poi_grips_info.price, title_name: @poi_grips_info.title_name }
+      post :create, poi_grips_info: { color: @poi_grips_info.color, description: @poi_grips_info.description, image_url: @poi_grips_info.image_url, price: @poi_grips_info.price, stock: @poi_grips_info.stock, title_name: @poi_grips_info.title_name }
     end
 
     assert_redirected_to poi_grips_info_path(assigns(:poi_grips_info))
@@ -35,7 +35,7 @@ class PoiGripsInfosControllerTest < ActionController::TestCase
   end
 
   test "should update poi_grips_info" do
-    patch :update, id: @poi_grips_info, poi_grips_info: { color: @poi_grips_info.color, description: @poi_grips_info.description, image_url: @poi_grips_info.image_url, price: @poi_grips_info.price, title_name: @poi_grips_info.title_name }
+    patch :update, id: @poi_grips_info, poi_grips_info: { color: @poi_grips_info.color, description: @poi_grips_info.description, image_url: @poi_grips_info.image_url, price: @poi_grips_info.price, stock: @poi_grips_info.stock, title_name: @poi_grips_info.title_name }
     assert_redirected_to poi_grips_info_path(assigns(:poi_grips_info))
   end
 

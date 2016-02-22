@@ -6,6 +6,7 @@ class CreatePoiGripsInfos < ActiveRecord::Migration
       t.string :image_url
       t.string :color
       t.integer :price
+      t.integer :stock
 
       t.timestamps null: false
     end

@@ -5,6 +5,7 @@ class CreatePoiShuttlecocksInfos < ActiveRecord::Migration
       t.text :description
       t.string :image_url
       t.integer :price
+      t.integer :stock
 
       t.timestamps null: false
     end

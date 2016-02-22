@@ -18,7 +18,7 @@ class PoiShuttlecocksInfosControllerTest < ActionController::TestCase
 
   test "should create poi_shuttlecocks_info" do
     assert_difference('PoiShuttlecocksInfo.count') do
-      post :create, poi_shuttlecocks_info: { description: @poi_shuttlecocks_info.description, image_url: @poi_shuttlecocks_info.image_url, price: @poi_shuttlecocks_info.price, title_name: @poi_shuttlecocks_info.title_name }
+      post :create, poi_shuttlecocks_info: { description: @poi_shuttlecocks_info.description, image_url: @poi_shuttlecocks_info.image_url, price: @poi_shuttlecocks_info.price, stock: @poi_shuttlecocks_info.stock, title_name: @poi_shuttlecocks_info.title_name }
     end
 
     assert_redirected_to poi_shuttlecocks_info_path(assigns(:poi_shuttlecocks_info))
@@ -35,7 +35,7 @@ class PoiShuttlecocksInfosControllerTest < ActionController::TestCase
   end
 
   test "should update poi_shuttlecocks_info" do
-    patch :update, id: @poi_shuttlecocks_info, poi_shuttlecocks_info: { description: @poi_shuttlecocks_info.description, image_url: @poi_shuttlecocks_info.image_url, price: @poi_shuttlecocks_info.price, title_name: @poi_shuttlecocks_info.title_name }
+    patch :update, id: @poi_shuttlecocks_info, poi_shuttlecocks_info: { description: @poi_shuttlecocks_info.description, image_url: @poi_shuttlecocks_info.image_url, price: @poi_shuttlecocks_info.price, stock: @poi_shuttlecocks_info.stock, title_name: @poi_shuttlecocks_info.title_name }
     assert_redirected_to poi_shuttlecocks_info_path(assigns(:poi_shuttlecocks_info))
   end
 

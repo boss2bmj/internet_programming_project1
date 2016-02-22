@@ -10,6 +10,7 @@
 #  weight             :string
 #  length             :string
 #  price              :integer
+#  stock              :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  image_file_name    :string

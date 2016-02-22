@@ -8,6 +8,7 @@ class CreatePoiRacketInfos < ActiveRecord::Migration
       t.string :weight
       t.string :length
       t.integer :price
+      t.integer :stock
 
       t.timestamps null: false
     end

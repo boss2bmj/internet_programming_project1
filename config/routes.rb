@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :poi_shuttlecocks_infos
   resources :poi_grips_infos
   resources :poi_string_infos
   resources :poi_racket_infos
+  resources :poi_shuttlecocks_infos
   resources :poi_apparel_infos
   resources :poi_product_infos
   # get 'cart/index'

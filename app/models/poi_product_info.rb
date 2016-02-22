@@ -18,6 +18,7 @@
 #
 
 class PoiProductInfo < ActiveRecord::Base
+  has_one:poi_product_info, as: :poi_info
   belongs_to :product
   belongs_to :poi_info, polymorphic: true
 end

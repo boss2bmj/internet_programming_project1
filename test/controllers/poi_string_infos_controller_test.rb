@@ -18,7 +18,7 @@ class PoiStringInfosControllerTest < ActionController::TestCase
 
   test "should create poi_string_info" do
     assert_difference('PoiStringInfo.count') do
-      post :create, poi_string_info: { color: @poi_string_info.color, description: @poi_string_info.description, guage: @poi_string_info.guage, image_url: @poi_string_info.image_url, length: @poi_string_info.length, price: @poi_string_info.price, title_name: @poi_string_info.title_name }
+      post :create, poi_string_info: { color: @poi_string_info.color, description: @poi_string_info.description, guage: @poi_string_info.guage, image_url: @poi_string_info.image_url, length: @poi_string_info.length, price: @poi_string_info.price, stock: @poi_string_info.stock, title_name: @poi_string_info.title_name }
     end
 
     assert_redirected_to poi_string_info_path(assigns(:poi_string_info))
@@ -35,7 +35,7 @@ class PoiStringInfosControllerTest < ActionController::TestCase
   end
 
   test "should update poi_string_info" do
-    patch :update, id: @poi_string_info, poi_string_info: { color: @poi_string_info.color, description: @poi_string_info.description, guage: @poi_string_info.guage, image_url: @poi_string_info.image_url, length: @poi_string_info.length, price: @poi_string_info.price, title_name: @poi_string_info.title_name }
+    patch :update, id: @poi_string_info, poi_string_info: { color: @poi_string_info.color, description: @poi_string_info.description, guage: @poi_string_info.guage, image_url: @poi_string_info.image_url, length: @poi_string_info.length, price: @poi_string_info.price, stock: @poi_string_info.stock, title_name: @poi_string_info.title_name }
     assert_redirected_to poi_string_info_path(assigns(:poi_string_info))
   end
 

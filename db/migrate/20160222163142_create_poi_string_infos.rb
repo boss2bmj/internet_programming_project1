@@ -8,6 +8,7 @@ class CreatePoiStringInfos < ActiveRecord::Migration
       t.string :length
       t.string :color
       t.integer :price
+      t.integer :stock
 
       t.timestamps null: false
     end
