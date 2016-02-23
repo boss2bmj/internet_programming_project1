@@ -20,8 +20,8 @@
           <tr>
             <td> <%= @poi_grips_info.title_name %> </td>
             <td> <%= @poi_grips_info.description %> </td>
-            <td> <%= number_to_currency(@poi_grips_info.price, :unit => '฿') %> </td>
             <td> <%= @poi_grips_info.color %> </td>
+            <td> <%= number_to_currency(@poi_grips_info.price, :unit => '฿') %> </td>
             <%if user_signed_in? %>
             <td> <%= @poi_grips_info.stock %> </td>
             <%end%>

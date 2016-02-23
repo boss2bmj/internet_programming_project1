@@ -1,29 +1,35 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title name:</strong>
-  <%= @poi_shuttlecocks_info.title_name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @poi_shuttlecocks_info.description %>
-</p>
+<div class="section no-pad-bot">
+  <div class="container">
+    <div class="row main-text-color">
+      <p id="notice"><%= notice %></p>
+      <img class="materialboxed" width="350" data-caption= <%= @poi_shuttlecocks_info.title_name %> src= <%= @poi_shuttlecocks_info.image.url(:large) %> >
+      <table class="striped">
+        <thead>
+          <tr>
+            <th data-field="title">Title</th>
+            <th data-field="description">Description</th>
+            <th data-field="price">Price</th>
+            <%if user_signed_in? %>
+            <th data-field="stock">Stock</th>
+            <%end%>
+          </tr>
+        </thead>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @poi_shuttlecocks_info.image_url %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @poi_shuttlecocks_info.price %>
-</p>
-
-<p>
-  <strong>Stock:</strong>
-  <%= @poi_shuttlecocks_info.stock %>
-</p>
-
-<%= link_to 'Edit', edit_poi_shuttlecocks_info_path(@poi_shuttlecocks_info) %> |
-<%= link_to 'Back', poi_shuttlecocks_infos_path %>
+        <tbody>
+          <tr>
+            <td> <%= @poi_shuttlecocks_info.title_name %> </td>
+            <td> <%= @poi_shuttlecocks_info.description %> </td>
+            <td> <%= number_to_currency(@poi_shuttlecocks_info.price, :unit => '฿') %> </td>
+            <%if user_signed_in? %>
+            <td> <%= @poi_shuttlecocks_info.stock %> </td>
+            <%end%>
+          </tr>
+        </tbody>
+      </table> <br>
+      <a class="waves-effect waves-light btn blue darken-4"   <%= link_to 'Edit', edit_poi_shuttlecocks_info_path(@poi_shuttlecocks_info) %> </a>
+      <a class="waves-effect waves-light btn blue darken-4" <%= link_to 'Back', poi_shuttlecocks_infos_path %> </a>
+    </div>
+  </div>
+</div>

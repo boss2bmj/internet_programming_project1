@@ -1,44 +1,40 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title name:</strong>
-  <%= @poi_string_info.title_name %>
-</p>
+<div class="section no-pad-bot">
+  <div class="container">
+    <div class="row main-text-color">
+      <p id="notice"><%= notice %></p>
+      <img class="materialboxed" width="350" data-caption= <%= @poi_string_info.title_name %> src= <%= @poi_string_info.image.url(:large) %> >
+      <table class="striped">
+        <thead>
+          <tr>
+            <th data-field="title">Title</th>
+            <th data-field="description">Description</th>
+            <th data-field="guage">Guage</th>
+            <th data-field="length">Length</th>
+            <th data-field="color">Color</th>
+            <th data-field="price">Price</th>
+            <%if user_signed_in? %>
+            <th data-field="stock">Stock</th>
+            <%end%>
+          </tr>
+        </thead>
 
-<p>
-  <strong>Description:</strong>
-  <%= @poi_string_info.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @poi_string_info.image_url %>
-</p>
-
-<p>
-  <strong>Guage:</strong>
-  <%= @poi_string_info.guage %>
-</p>
-
-<p>
-  <strong>Length:</strong>
-  <%= @poi_string_info.length %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @poi_string_info.color %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @poi_string_info.price %>
-</p>
-
-<p>
-  <strong>Stock:</strong>
-  <%= @poi_string_info.stock %>
-</p>
-
-<%= link_to 'Edit', edit_poi_string_info_path(@poi_string_info) %> |
-<%= link_to 'Back', poi_string_infos_path %>
+        <tbody>
+          <tr>
+            <td> <%= @poi_string_info.title_name %> </td>
+            <td> <%= @poi_string_info.description %> </td>
+            <td> <%= @poi_string_info.guage %> </td>
+            <td> <%= @poi_string_info.length %> </td>
+            <td> <%= @poi_string_info.color %> </td>
+            <td> <%= number_to_currency(@poi_string_info.price, :unit => '฿') %> </td>
+            <%if user_signed_in? %>
+            <td> <%= @poi_string_info.stock %> </td>
+            <%end%>
+          </tr>
+        </tbody>
+      </table> <br>
+      <a class="waves-effect waves-light btn blue darken-4"   <%= link_to 'Edit', edit_poi_string_info_path(@poi_string_info) %> </a>
+      <a class="waves-effect waves-light btn blue darken-4" <%= link_to 'Back', poi_string_infos_path %> </a>
+    </div>
+  </div>
+</div>
