@@ -9,9 +9,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
 </head>
-<body>
+<style>
+.parallax-container {
+      height: "100 px";
+    }
+
+}
+</style>
+<body class="">
   <!-- Dropdown Structure -->
   <%= render 'layouts/header'%>
   <%if user_signed_in? %>
@@ -22,7 +28,7 @@
 
   <%else%>
     <div class="parallax-container">
-      <div class="parallax"><%= image_tag("bk3.jpg") %></div>
+      <div class="parallax"><%= image_tag("bbb.jpg") %></div>
     </div>
       <div class= "container">
         <p class="notice"><%= notice %></p>
