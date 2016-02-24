@@ -3,13 +3,16 @@
     <div class="row main-text-color">
 
       <h1 class="">New Racket Product</h1>
+      Product Name: <%= @poi.title %>
+      <hr>
     </div>
   </div>
 </div>
 
 
 
-<%= render 'form' %>
+
+<%= render 'form', poi: @poi %>
 <div class="section no-pad-bot">
   <div class="container">
     <div class="row main-text-color">

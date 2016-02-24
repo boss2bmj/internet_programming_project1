@@ -12,6 +12,7 @@
             <th data-field="price">Item Price</th>
             <th data-field="category">Category</th>
             <th data-field="subcategory">Subcategory</th>
+            <th data-field="poiproductinfos">poi count</th>
             <%if user_signed_in? %>
             <th data-field="stock">Stock</th>
             <%end%>
@@ -25,6 +26,7 @@
             <td> <%= number_to_currency(@product.price, :unit => '฿') %> </td>
             <td> <%= @product.category %> </td>
             <td> <%= @product.subcategory %> </td>
+            <td> <%= @product.poi_product_infos.count %></td>
             <%if user_signed_in? %>
             <td> <%= @product.stock %> </td>
             <%end%>
@@ -68,6 +70,7 @@
   <%= @product.stock %>
 </p>
 <%end%> -->
+      <a class="waves-effect waves-light btn blue darken-4"   <%= link_to 'New Racket', new_poi_racket_info_path(product_id: @product.idnfos) %> </a>
       <a class="waves-effect waves-light btn blue darken-4"   <%= link_to 'Edit', edit_product_path(@product) %> </a>
       <a class="waves-effect waves-light btn blue darken-4" <%= link_to 'Back', products_path %> </a>
     </div>
