@@ -1,0 +1,28 @@
+
+
+<div class="section no-pad-bot">
+  <div class="container">
+    <div class="row main-text-color">
+      <p id="notice"><%= notice %></p>
+      <img class="materialboxed" width="350" data-caption= <%= @imageforhome.image_name %> src= <%= @imageforhome.image.url(:large) %> >
+      <table class="striped">
+        <thead>
+          <tr>
+            <th data-field="image">Image Name</th>
+            <th data-field="description">Description</th>
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @imageforhome.image_name %> </td>
+            <td> <%= @imageforhome.description %> </td>
+          </tr>
+        </tbody>
+      </table> <br>
+      <a class="waves-effect waves-light btn blue darken-4"   <%= link_to 'Edit', edit_imageforhome_path(@imageforhome) %> </a>
+      <a class="waves-effect waves-light btn blue darken-4" <%= link_to 'Back', imageforhomes_path %> </a>
+    </div>
+  </div>
+</div>

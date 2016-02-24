@@ -19,8 +19,14 @@ rails g paperclip poi_shuttlecocks_infos image
 rails g paperclip poi_string_infos image
 
 
+# ---------------------------------------------------------------------------
+# rails destroy scaffold PoiShuttlecocksInfo
+# rails destroy scaffold PoiGripsInfo
+# rails destroy scaffold PoiStringInfo
+# rails destroy scaffold PoiRacketInfo
 
-rails destroy scaffold PoiShuttlecocksInfo
-rails destroy scaffold PoiGripsInfo
-rails destroy scaffold PoiStringInfo
-rails destroy scaffold PoiRacketInfo
+# ---------------------------------------------------------------------------
+
+
+rails g scaffold Imageforhome image_name:string description:text
+rails g paperclip imageforhomes image
