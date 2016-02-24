@@ -21,9 +21,10 @@
   <!-- Dropdown Structure -->
   <%= render 'layouts/header'%>
   <%if user_signed_in? %>
+    <p class="notice blue-text text-darken-2"><%= notice %></p>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+    <p class="alert "><%= alert %></p>
     <%= yield %>
 
   <%else%>
@@ -31,7 +32,7 @@
       <div class="parallax"><%= image_tag("bbb.jpg") %></div>
     </div>
       <div class= "container">
-        <p class="notice"><%= notice %></p>
+        <p class="notice blue-text text-darken-2"><%= notice %></p>
         <p class="alert"><%= alert %></p>
         <%= yield %>
 
