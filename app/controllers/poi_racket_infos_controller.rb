@@ -1,3 +1,24 @@
+# == Schema Information
+#
+# Table name: poi_racket_infos
+#
+#  id                 :integer          not null, primary key
+#  title_name         :string
+#  description        :text
+#  image_url          :string
+#  shaft              :string
+#  weight             :string
+#  length             :string
+#  price              :integer
+#  stock              :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
+#
+
 class PoiRacketInfosController < ApplicationController
   before_action :set_poi_racket_info, only: [:show, :edit, :update, :destroy]
   before_action :set_poi, only: [:new , :create]
