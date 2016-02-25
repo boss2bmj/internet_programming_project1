@@ -1,6 +1,5 @@
 class PoiRacketInfosController < ApplicationController
   before_action :set_poi_racket_info, only: [:show, :edit, :update, :destroy]
-  before_action :set_poi, only: [:new , :create]
 
   # GET /poi_racket_infos
   # GET /poi_racket_infos.json
@@ -66,9 +65,6 @@ class PoiRacketInfosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_poi_racket_info
       @poi_racket_info = PoiRacketInfo.find(params[:id])
-    end
-    def set_poi
-      @product = Product.find(params[:product_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
